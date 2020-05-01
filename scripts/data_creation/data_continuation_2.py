@@ -8,11 +8,11 @@ df  = pd.DataFrame()
 
 count = 1
 
-number = 34
+number = 42
 
 for f in files:
 
-	if f != 'data_continuation.py' and f != 'OvaryCancer_2.csv':
+	if f != 'data_continuation.py' and f != 'OvaryCancer.csv':
 		data = pd.read_csv(f,delimiter = '\t')
 		if count == 1:
 			df['patients'] = data['Composite Element REF']
@@ -49,4 +49,4 @@ bigdata = pd.concat([data,df_new], ignore_index = True)
 #print(bigdata)
 
 
-bigdata.to_csv('OvaryCancer_3.csv')
+bigdata.to_csv('OvaryCancer.csv')
